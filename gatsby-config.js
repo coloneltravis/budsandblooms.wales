@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: "/gatsby-react-bootstrap-starter",
   siteMetadata: {
     title: `Buds and Blooms Intergenerational Groups`,
     description: `A non-profit group for all generations in care homes and day centres.`,
