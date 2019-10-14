@@ -1,0 +1,16 @@
+---
+title: "Autumn-themed session"
+date: "2019-09-26"
+venue: "Morel Court Care Home, Penarth"
+category: "event"
+---
+Come along and join the fun with our Autumn themed sessions for September.  Activities will include sensory play, singing, signing, stories, massage, dressing up, imaginative play, parachute games, instruments, free play, puppets and lots of topic related props.   There are lots of new resources to explore and experiment with as a result of our grant from The National Lottery Fund. 
+
+Buds and Blooms are small, friendly groups held in care homes in Barry on a Wednesday morning and Penarth on a Thursday afternoon.  The residents love seeing us and interacting with the children and it is lovely to see the relationships that are forming between the residents, children and parents/carers. 
+
+Book now to avoid disappointment as spaces will be limited to ten families per session. Sessions cost £2.50 for the first child and £1.25 for each additional sibling or the equivalent of £2 a session for the first child and £1.00 for each additional sibling if paid for in a block of a full month at a time.  Sessions need to be booked and paid for in advance as places are limited due to the nature of the sessions.  Please contact me to check availability and book your space which needs to be done via bank transfer.  New members always welcome.  
+
+Everyone who signs up to sessions in September will receive a free book.  
+
+Places are not refundable or transferable except in the unlikely event of me needing to cancel a session.
+
