@@ -6,27 +6,29 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `content`,
-        path: `${__dirname}/src`,
-      },
-    },
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `images`,
+          path: `${__dirname}/src/images`,
+        },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `content`,
+          path: `${__dirname}/src/content`,
+        },
+    },
+    `gatsby-plugin-sass`,
+    `gatsby-transformer-remark`,
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-react-bootstrap`,
-        short_name: `react-bootstrap`,
+        name: `budsandblooms-intergenerational-groups`,
+        short_name: `buds-and-blooms-wales`,
         start_url: `/`,
         background_color: `#20232a`,
         theme_color: `#20232a`,

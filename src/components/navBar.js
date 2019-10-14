@@ -10,14 +10,19 @@ const CustomNavbar = ({ pageInfo }) => {
       <Navbar variant="dark" expand="lg" id="site-navbar">
         {/* <Container> */}
         <Link to="/" className="link-no-style">
-          <Navbar.Brand as="span">News</Navbar.Brand>
+          <Navbar.Brand as="span">Blog</Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto" activeKey={pageInfo && pageInfo.pageName}>
-            <Link to="/sessions" className="link-no-style">
-              <Nav.Link as="span" eventKey="sessions">
-                Sessions
+            <Link to="/venues" className="link-no-style">
+              <Nav.Link as="span" eventKey="venues">
+                Venues
+              </Nav.Link>
+            </Link>
+            <Link to="/events" className="link-no-style">
+              <Nav.Link as="span" eventKey="events">
+                Events
               </Nav.Link>
             </Link>
             <Link to="/contact" className="link-no-style">

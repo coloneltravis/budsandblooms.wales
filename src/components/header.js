@@ -1,16 +1,17 @@
 import Img from "gatsby-image"
-import {useStaticQuery} from "gatsby"
+import { useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+
 
 const Header = ({ siteTitle }) => {
 
   const data = useStaticQuery(
     graphql`
     query {
-        file(relativePath: { eq: "images/budsandblooms-icon.png" }) {
+        file(relativePath: { eq: "budsandblooms-icon.png" }) {
             childImageSharp {
-                fixed (width: 70) {
+                fixed (width: 90) {
                     ...GatsbyImageSharpFixed
                 }
             }
@@ -18,6 +19,7 @@ const Header = ({ siteTitle }) => {
 
     }`
   )
+
   return (
   <header>
 

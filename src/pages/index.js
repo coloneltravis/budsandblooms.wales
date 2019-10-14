@@ -18,13 +18,13 @@ const IndexPage = ({data}) => {
             {data.allMarkdownRemark.edges.map(({ node }) => (
             <div key={node.id}>
               <Link to={node.fields.slug}>
-              <h3 class="para-heading">
+              <h3 className="para-heading">
                 {node.frontmatter.title}{" "}
                 <span>
                   — {node.frontmatter.date}
                 </span>
               </h3>
-              <p class="para-text">{node.excerpt}</p>
+              <p className="para-text">{node.excerpt}</p>
               </Link>
             </div>
             ))}
@@ -38,19 +38,19 @@ const IndexPage = ({data}) => {
 
 export const query = graphql`
     query {
-        allMarkdownRemark {
-        totalCount
-        edges {
+        allMarkdownRemark(filter: {frontmatter: {category: {eq: "post"}}}) {
+          totalCount
+          edges {
             node {
-                id
-                frontmatter {
-                    title
-                    date(formatString: "DD MMMM YYYY")
-                }
-                fields {
-                  slug
-                }
-                excerpt
+              id
+              frontmatter {
+                title
+                date(formatString: "Do MMMM YYYY")
+              }
+              fields {
+                slug
+              }
+              excerpt
             }
         }
     }

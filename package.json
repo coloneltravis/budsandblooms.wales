@@ -1,22 +1,23 @@
 {
-  "name": "gatsby-starter-react-bootstrap",
+  "name": "budsandblooms-wales",
   "private": true,
-  "description": "A starter that includes and configures react-bootstrap and react-icons, along with SASS handling. ",
+  "description": "A web site for Buds and Blooms Intergenerational Groups",
   "version": "0.1.0",
-  "author": "Billy Jacoby <billyjacoby@gmail.com>",
+  "author": "Jake Bourne",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "gatsby": "^2.3.34",
     "gatsby-cli": "^2.7.47",
-    "gatsby-image": "^2.0.41",
+    "gatsby-image": "^2.2.27",
     "gatsby-plugin-manifest": "^2.0.29",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-sass": "^2.0.11",
-    "gatsby-plugin-sharp": "^2.0.35",
+    "gatsby-plugin-sharp": "^2.2.28",
     "gatsby-source-filesystem": "^2.0.33",
     "gatsby-transformer-remark": "^2.6.22",
-    "gatsby-transformer-sharp": "^2.1.18",
+    "gatsby-transformer-sharp": "^2.2.20",
+    "graphql": "^14.5.8",
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
@@ -44,10 +45,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/coloneltravis/budsandblooms.wales.git"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/https://github.com/coloneltravis/budsandblooms.wales.git.//issues"
   },
   "homepage": "https://billyjacoby.github.io/gatsby-react-bootstrap-starter/"
 }

@@ -6,25 +6,26 @@
  */
 
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-
+import { useStaticQuery } from "gatsby"
 import { Container, Row, Col } from "react-bootstrap"
 
 import Header from "./header"
 import Navbar from "./navBar"
 
-const Layout = ({ children, pageInfo }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
+const Layout = ({ children, pageInfo }) => {
+
+  const data = useStaticQuery(
+    graphql`
+      query {
         site {
           siteMetadata {
             title
           }
         }
-      }
-    `}
-    render={data => (
+      }`
+  )
+
+    return (
 
         <Container>
           <Container fluid className="px-0 main">
@@ -58,8 +59,7 @@ const Layout = ({ children, pageInfo }) => (
             </Row>
           </Container>
         </Container>
-    )}
-  />
-)
+    )
+  }
 
 export default Layout
