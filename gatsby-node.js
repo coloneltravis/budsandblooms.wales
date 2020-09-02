@@ -25,7 +25,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
     const result = await graphql(`
     {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: {frontmatter: {title: {ne: ""}}}) {
         totalCount
         edges {
           node {
@@ -43,7 +43,6 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-    
     `)
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
@@ -56,4 +55,43 @@ exports.createPages = async ({ graphql, actions }) => {
           },
         })
     })
+
+    const resultContentful = await graphql(`
+    {
+      allContentfulResourcePacks(sort: {fields: sortOrder, order: ASC}, filter: {node_locale: {eq: "en-US"}}) {
+        edges {
+          node {
+            resourceTitle
+            sortOrder
+            slug
+            sessionDate
+            internal {
+              type
+            }
+            instructions {
+              childMarkdownRemark {
+                internal {
+                  type
+                }
+                html
+              }
+            }
+          }
+        }
+      }
+    }
+    `)
+    resultContentful.data.allContentfulResourcePacks.edges.forEach(({ node }) => {
+      createPage({
+        path: node.slug,
+        component: path.resolve(`./src/templates/resource-pack.js`),
+        context: {
+          // Data passed to context is available
+          // in page queries as GraphQL variables.
+          slug: node.slug,
+        },
+      })
+  })
+
+
   }

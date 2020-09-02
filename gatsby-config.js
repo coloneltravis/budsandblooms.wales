@@ -1,5 +1,5 @@
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: '.env.development',
 });
 
 module.exports = {
@@ -42,9 +42,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_API_KEY,
-        downloadLocal: true,
+        spaceId: process.env.BUDSANDBLOOMS_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_API
       },
     },
   ],
