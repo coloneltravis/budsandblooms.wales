@@ -10,16 +10,12 @@ const FeedbackPage = ({data}) => {
 
   <Layout pageInfo={{ pageName: "Feedback" }}>
     <SEO title="Home" keywords={[`intergenerational`, `testimonials`, `feedback`, 'friendly', 'happy']} />
-    <Container className="text-left">
+    <Container className="text-left feedback-container">
 
       <Row>
         <Col>
             {data.allContentfulFeedback.edges.map(({ node }) => (
-            <div>
-              <h3 class="para-heading">
-                {node.providerName}
-              </h3>
-
+            <div class="feedback-bubble">
               <div class="para-text" dangerouslySetInnerHTML={{ __html: node.feedbackMarkdown.childMarkdownRemark.html }} />
             </div>
             ))}

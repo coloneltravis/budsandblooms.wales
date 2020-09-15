@@ -14,11 +14,15 @@
   font-family: $headingFont;
   color: #f77;
   font-weight: 400;
-  text-decoration: "none";
+  text-decoration: none;
 
   h1 {font-size: 28pt;}
   h2 {font-size: 24pt;}
   h3 {font-size: 20pt;}
+
+  .resource { font-size: 18pt; }
+  .information { font-family: "arial, helvetica, sans"; font-size: 14pt; color:black; padding:10px;}
+  
 }
 
 

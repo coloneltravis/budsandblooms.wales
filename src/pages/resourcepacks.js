@@ -16,10 +16,13 @@ const ResourcePacksPage = ({data}) => {
         <Col>
             {data.allContentfulResourcePacks.edges.map(({ node }) => (
             <div>
-                <Link to={node.slug}>
-                <h3 class="para-heading">
+                <Link className="para-heading" to={"/" + node.slug}>
+                <span class="resource">
                   {node.resourceTitle}
-                </h3> 
+                </span> 
+                <span class="information">
+                  {node.sessionDate}
+                </span>
                 </Link>
             </div>
             ))}
@@ -38,7 +41,7 @@ export const query = graphql`
             resourceTitle
             sortOrder
             slug
-            sessionDate
+            sessionDate(formatString: "MMMM YYYY")
           }
         }
       }

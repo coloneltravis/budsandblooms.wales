@@ -39,3 +39,17 @@ a.link-no-style {
     }
   }
 }
+
+
+.feedback-container {
+  background-color: #ccf;
+  border-radius: 7px;
+  width: 75%;
+
+  .feedback-bubble {
+    background-color: white;
+    margin: 20px; padding: 10px;
+    border-radius: 10px;
+  }
+}
+
