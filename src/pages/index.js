@@ -1,5 +1,6 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import { Img } from "gatsby-image"
 import { Row, Col, Container } from "react-bootstrap"
 
 import Layout from "../components/layout"
@@ -8,52 +9,39 @@ import SEO from "../components/seo"
 const IndexPage = ({data}) => {
   return (
 
-  <Layout pageInfo={{ pageName: "Blog" }}>
-    <SEO title="Home" keywords={[`intergenerational`, `parents`, `children`]} />
-    <Container className="text-left">
+    <Layout pageInfo={{ pageName: "" }}>
+      <Container fluid>
+        <SEO title="Home" keywords={[`intergenerational`, `parents`, `children`]} />
 
-      <Row className="justify-content-center my-3">
-        <Col md="8">
-           
-            {data.allMarkdownRemark.edges.map(({ node }) => (
-            <div key={node.id}>
-              <Link to={node.fields.slug}>
-              <h3 className="para-heading">
-                {node.frontmatter.title}{" "}
-                <span>
-                  — {node.frontmatter.date}
-                </span>
-              </h3>
-              <p className="para-text">{node.excerpt}</p>
-              </Link>
-            </div>
-            ))}
+        <Row>
+        <Col xs md />
+          <Col xs md>       
+            <img src={data.contentfulAsset.fluid.src} alt={data.contentfulAsset.title} />
+          </Col>
+          <Col xs md/>
+        </Row>
 
-        </Col>
-      </Row>
-    </Container>
-  </Layout>
-  )
-}
+      </Container>
+    </Layout>
+
+  )}
 
 export const query = graphql`
     query {
-        allMarkdownRemark(filter: {frontmatter: {category: {eq: "post"}}}) {
-          totalCount
-          edges {
-            node {
-              id
-              frontmatter {
-                title
-                date(formatString: "Do MMMM YYYY")
-              }
-              fields {
-                slug
-              }
-              excerpt
-            }
+      contentfulAsset(file: {fileName: {eq: "BudsAndBlooms_Teddy.jpeg"}}) {
+        file {
+          url
         }
-    }
-}`
+        title
+        fluid (maxWidth: 800) {
+          ...GatsbyContentfulFluid
+        }
+      }
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }`
 
 export default IndexPage

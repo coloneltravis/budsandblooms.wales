@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Img } from "gatsby-image"
 import Layout from "../components/layout"
 import { Container, Row, Col } from "react-bootstrap"
 
@@ -28,12 +27,12 @@ export default ({ data }) => {
           <Col md={8}>
             <div class="para-text" dangerouslySetInnerHTML={{ __html: activity.activityDescription.childMarkdownRemark.html }} />
           </Col>
-        <Col md={4}>
-              <img src={activity.activityImage.fluid.src} />
-         </Col>
+          <Col md={4}>
+              <img src={activity.activityImage.fluid.src} alt={activity.activityTitle} />
+          </Col>
         </Row>
         </div>
-      ))} 
+      ))}
       </Container>
     </Layout>
   )

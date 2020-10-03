@@ -25,8 +25,7 @@ const Header = ({ siteTitle }) => {
 
     <div
       style={{
-        maxWidth: 960,
-        padding: `1.3rem 1.0875rem`,
+        maxWidth: 960
       }}
     >
       <Img fixed={data.file.childImageSharp.fixed} />

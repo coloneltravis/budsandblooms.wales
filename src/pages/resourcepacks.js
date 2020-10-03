@@ -9,7 +9,7 @@ const ResourcePacksPage = ({data}) => {
   return (
 
   <Layout pageInfo={{ pageName: "Resource Packs" }}>
-    <SEO title="Home" keywords={[`intergenerational`, `resource packs`, `instructions`, 'craft', 'happy']} />
+    <SEO title="Home" keywords={[`intergenerational`, `resource packs`, `sensory play`, `instructions`, 'craft', 'happy']} />
     <Container className="text-left">
 
       <Row>
