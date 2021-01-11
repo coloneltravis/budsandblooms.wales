@@ -23,6 +23,11 @@ const CustomNavbar = ({ pageInfo }) => {
                 Resource Packs
               </Nav.Link>
             </Link>
+            <Link to="/sensoryplay" className="link-no-style">
+              <Nav.Link as="span" eventKey="sensoryplay">
+                Sensory Play
+              </Nav.Link>
+            </Link>
             <Link to="/contact" className="link-no-style">
               <Nav.Link as="span" eventKey="contact">
                 Contact us

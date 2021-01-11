@@ -91,7 +91,48 @@ exports.createPages = async ({ graphql, actions }) => {
           slug: node.slug,
         },
       })
-  })
+    })
+
+
+    const resultSensory = await graphql(`
+    {
+      allContentfulSensoryPlay {
+        edges {
+          node {
+            slug
+            sensoryPlayTitle
+            itemsNeeded {
+              childMarkdownRemark {
+                internal {
+                  type
+                }
+                html
+              }
+            }
+            instructions {
+              childMarkdownRemark {
+                internal {
+                  type
+                }
+                html
+              }
+            }
+          }
+        }
+      }
+    }
+    `)
+    resultSensory.data.allContentfulSensoryPlay.edges.forEach(({ node }) => {
+        createPage({
+          path: node.slug,
+          component: path.resolve(`./src/templates/sensory-play.js`),
+          context: {
+            // Data passed to context is available
+            // in page queries as GraphQL variables.
+            slug: node.slug,
+          },
+        })
+    })
 
 
   }
